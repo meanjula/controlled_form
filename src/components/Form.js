@@ -1,9 +1,9 @@
 import React from 'react';
-
+//onSubmit check all form input before sending and collect data
 const Form = (props) => {
 	console.log(props)
 	return (
-		<form>
+		<form onSubmit={props.submit}>
 			<div className="form-field">
 			  <label htmlFor="firstname">First name</label>
 			  <input type="text" name="firstname" id="firstname" required onChange={props.formHandler}></input>
@@ -29,7 +29,7 @@ const Form = (props) => {
                <option value="Manager">Manager</option>
 			</select>
 			</div>
-
+            <input type="submit" value="send" ></input>
 		</form>
 	);
 };

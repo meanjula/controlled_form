@@ -3,6 +3,11 @@
 }
 @import url("https://fonts.googleapis.com/css2?family=Caveat&family=Mochiy+Pop+P+One&family=Roboto:ital,wght@0,300;0,500;1,400&display=swap");
 
+body {
+  font-family: "Roboto", sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
 .App {
   margin: auto; /* center the element*/
   border-radius: 5px;
@@ -10,9 +15,23 @@
   min-height: 100%;
   padding: 18px;
   text-align: justify;
-  font-family: "Roboto", sans-serif;
-  font-size: 1.5rem;
+  font-size: 1.8rem;
 }
+/***************** shared style *********************/
+.yesButton,
+.noButton,
+input[type="submit"] {
+  background-color: rgb(230, 127, 1);
+  width: 40%;
+  height: 3rem;
+  margin: 0.5rem;
+  font-size: 1.5rem;
+  border-radius: 5px;
+  text-transform: uppercase;
+  cursor: pointer;
+}
+/***************** FORM COMPONENT *********************/
+
 form {
   background-color: #04386d;
   height: 100%;
@@ -25,7 +44,7 @@ form {
   flex-direction: row;
   align-items: center;
   justify-content: center;
-  margin-top: 1rem;
+  margin-top: 2rem;
 }
 .form-field:first-child {
   padding-top: 1.5rem;
@@ -38,16 +57,25 @@ label {
 input,
 textarea,
 select {
+  font-family: "Roboto", sans-serif;
   width: 60%;
-  text-align: center;
-  font-size: 1.2rem;
+  font-size: 1.5rem;
   border-radius: 5px;
   text-transform: capitalize;
   height: 3rem;
+  padding-left: 1rem;
 }
 textarea {
   height: 8rem;
+  padding-top: 1rem;
 }
+input[type="submit"] {
+  margin: 5rem;
+  margin-left: 30rem;
+  width: 30%;
+}
+
+/***************** VIEW COMPONENT *********************/
 
 h3 {
   padding: 1rem 0;
@@ -86,10 +114,47 @@ span {
   font-size: 2.2rem;
   font-weight: 600;
   padding-left: 3rem;
+  text-transform: capitalize;
 }
 .view p:last-child {
   line-height: normal;
   border-bottom: none;
+}
+
+/***************** POPUP COMPONENT *********************/
+
+.overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(35, 35, 35, 0.65);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+.inner-popup {
+  position: relative;
+  border: 1px solid black;
+  width: 40%;
+  max-width: 1400px;
+  padding: 2rem;
+  height: 50vh;
+  background-color: rgb(236, 234, 231);
+  font-size: 2rem;
+  border-radius: 5px;
+  box-shadow: 0 0 5px #333;
+}
+.yesButton:hover,
+input[type="submit"]:hover {
+  background-color: rgb(60, 113, 6);
+  color: rgb(255, 252, 252);
+}
+.noButton {
+  border: darkolivegreen;
+  color: darkolivegreen;
+  background-color: transparent;
 }
 @media (max-width: 800px) {
   .App {
