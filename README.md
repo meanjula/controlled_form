@@ -10,9 +10,9 @@ form data is updated based on user input which are handled by setstate in formHa
 
 #### Popup
 
-Popup component receive all the data from formHandler as props and display it on popup box.
+Popup component receive all the updated data from formHandler(usestate) as props and display it on popup box.
 
-- View
+#### View
 
 View also gets user input data as props and shows it in the browser as notepad which is achieved with some css tricks.
 
