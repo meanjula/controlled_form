@@ -1,38 +1,160 @@
+* {
+  box-sizing: border-box;
+}
+@import url("https://fonts.googleapis.com/css2?family=Caveat&family=Mochiy+Pop+P+One&family=Roboto:ital,wght@0,300;0,500;1,400&display=swap");
+
 .App {
-  text-align: center;
+  margin: auto; /* center the element*/
+  border-radius: 5px;
+  width: 50%;
+  min-height: 100%;
+  padding: 18px;
+  text-align: justify;
+  font-family: "Roboto", sans-serif;
+  font-size: 1.5rem;
 }
-
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
+form {
+  background-color: #04386d;
+  height: 100%;
+  padding-bottom: 1rem;
+  color: beige;
+  border-radius: 5px;
 }
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
-.App-header {
-  background-color: #282c34;
-  min-height: 100vh;
+.form-field {
   display: flex;
-  flex-direction: column;
+  flex-direction: row;
   align-items: center;
   justify-content: center;
-  font-size: calc(10px + 2vmin);
-  color: white;
+  margin-top: 1rem;
+}
+.form-field:first-child {
+  padding-top: 1.5rem;
+}
+label {
+  display: block;
+  width: 30%;
 }
 
-.App-link {
-  color: #61dafb;
+input,
+textarea,
+select {
+  width: 60%;
+  text-align: center;
+  font-size: 1.2rem;
+  border-radius: 5px;
+  text-transform: capitalize;
+  height: 3rem;
+}
+textarea {
+  height: 8rem;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+h3 {
+  padding: 1rem 0;
+}
+.box {
+  display: flex;
+  background-color: rgb(225, 223, 217);
+  height: 100%;
+}
+.empty-div {
+  border: 3px solid black;
+  width: 8%;
+  border-right: 3px solid rgb(163, 32, 15);
+  margin: 0 2px;
+}
+.line {
+  height: 4.3rem;
+  border-bottom: 3px solid rgb(61, 59, 59);
+}
+.show-input {
+  display: block;
+  border: 3px solid #6f4e37;
+  border-left: 3px solid rgb(163, 32, 15);
+  width: 95%;
+}
+.view p {
+  line-height: 4rem;
+  border-bottom: 3px solid black;
+  padding-left: 1.5rem;
+  font-family: "Mochiy Pop P One", sans-serif;
+  font-size: 1.3rem;
+}
+
+span {
+  font-family: "Caveat", cursive;
+  font-size: 2.2rem;
+  font-weight: 600;
+  padding-left: 3rem;
+}
+.view p:last-child {
+  line-height: normal;
+  border-bottom: none;
+}
+@media (max-width: 800px) {
+  .App {
+    width: 90%;
   }
-  to {
-    transform: rotate(360deg);
+}
+
+@media (max-width: 550px) {
+  .App {
+    width: 95%;
+    font-size: 1.2rem;
+  }
+
+  .form-field {
+    display: flex;
+    flex-direction: column;
+  }
+  label {
+    width: fit-content;
+  }
+  input,
+  textarea,
+  select {
+    height: 2rem;
+    font-size: 1rem;
+  }
+  .line {
+    height: 2.2rem;
+  }
+  h3 {
+    padding: 0.5rem 0;
+  }
+  .view p {
+    line-height: 2rem;
+    padding-left: 0.5rem;
+    font-size: 1rem;
+  }
+  span {
+    font-size: 1.5rem;
+    padding-left: 1rem;
+  }
+}
+@media (max-width: 320px) {
+  .App {
+    font-size: 1rem;
+  }
+  label,
+  input,
+  textarea,
+  select {
+    width: 90%;
+  }
+  textarea {
+    height: 5rem;
+  }
+  .box {
+    width: 100%;
+  }
+  .view p {
+    padding-left: 0;
+  }
+  span {
+    padding-left: 0.2rem;
+  }
+  .show-input {
+    font-size: 0.5rem;
   }
 }
