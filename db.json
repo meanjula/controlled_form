@@ -1,0 +1,47 @@
+{
+  "notes": [
+    {
+      "id": 1,
+      "firstname": "Anjula",
+      "lastname": "Timsina",
+      "phone": "123456789",
+      "message": "Hello",
+      "role": "developer"
+    },
+    {
+      "id": 2,
+      "firstname": "Aashna",
+      "lastname": "Timsina",
+      "phone": "345678912",
+      "message": "Good day",
+      "role": "student"
+    },
+    
+    {
+      "firstname": "asshhhh",
+      "lastname": "werty",
+      "phone": "1244444444",
+      "role": "ceo",
+      "message": "hello",
+      "id": 2
+    },
+    {
+      "firstname": "anjula",
+      "lastname": "ghale",
+      "phone": "1234567890",
+      "role": "Manager",
+      "message": "hello there how are you",
+      "id": 3
+    }
+  ],
+  "comments": [
+    {
+      "id": 1,
+      "body": "some comment",
+      "postId": 1
+    }
+  ],
+  "profile": {
+    "name": "typicode"
+  }
+}

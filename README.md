@@ -16,19 +16,48 @@ Popup component receive all the updated data from formHandler(usestate) as props
 
 View also gets user input data as props and shows it in the browser as notepad which is achieved with some css tricks.
 
+#### Json server
+
+- create db.json file at root level
+
+- install json server
+
+```shell
+npm install json-server --save-dev
+```
+
+- only for development environment so needed in dev dependencies
+  - edit script and include
+  ```shell
+  "server":"json-server -p3001 --watch db.json"
+  ```
+- start the server
+
+```shell
+http://localhost:3001/notes
+```
+
+- install axios for fetching and posting data
+
+#### Notes
+
+Áll backend data inside json server are displayed here.
+
 ## Technologies used
 
-Built with:
-
 - Reactjs
+- ReactDom
+- Axios
+- JsonServer
 
 ## Screenshot
 
-![screenshot of controlled form in large screen](./images/form.png)
+![screenshot of controlled form in large screen](./images/screenshot.png)
 
 ## Sources
 
-- [reactjs documentation](https://reactjs.org/tutorial/tutorial.html)
+- [Reactjs documentation](https://reactjs.org/tutorial/tutorial.html)
+- [Json server](https://github.com/typicode/json-server)
 
 ## Authors and acknowledgment
 
