@@ -27,16 +27,16 @@ npm install json-server --save-dev
 ```
 
 - only for development environment so needed in dev dependencies
+
   - edit script and include
+
   ```shell
   "server":"json-server -p3001 --watch db.json"
+
   ```
-- start the server
 
-```shell
-http://localhost:3001/notes
-```
-
+- npm start for opening browser view
+- for server running npm run server
 - install axios for fetching and posting data
 
 #### Notes

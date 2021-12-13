@@ -94,7 +94,7 @@ textarea {
 }
 .empty-div {
   border: 1px solid black;
-  width: 10%;
+  width: 20%;
   border-right: 1px solid rgb(163, 32, 15);
   margin: 0 2px;
 }
@@ -173,6 +173,7 @@ input[type="submit"]:hover {
   border: 1px solid black;
   text-align: center;
   font-size: 1.2rem;
+  padding: 1rem;
 }
 .notes {
   margin-top: 2rem;
