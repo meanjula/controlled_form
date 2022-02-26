@@ -21,13 +21,12 @@ body {
 }
 /***************** shared style *********************/
 .yesButton,
-.noButton,
-input[type="submit"] {
+.noButton {
   background-color: rgb(230, 127, 1);
   width: 40%;
   height: 3rem;
   margin: 0.5rem;
-  font-size: 1.5rem;
+  font-size: 1.2rem;
   border-radius: 5px;
   text-transform: uppercase;
   cursor: pointer;
@@ -35,30 +34,35 @@ input[type="submit"] {
 /***************** FORM Area *********************/
 .form-area {
   display: flex;
-  background-color: #04386d;
+  background: linear-gradient(
+    to right,
+    rgba(68, 117, 182, 0.602),
+    skyblue,
+    rgba(212, 181, 187, 0.493)
+  );
   justify-content: center;
   width: 100%;
 }
 /***************** FORM COMPONENT *********************/
 
 form {
-  background-color: #04386d;
-  flex-basis: 50%;
+  background: linear-gradient(
+    to right,
+    rgba(104, 132, 168, 0.602),
+    skyblue,
+    rgba(212, 181, 187, 0.493)
+  );
+  flex-basis: 40%;
   padding-bottom: 0.5rem;
-  color: beige;
+
   border-radius: 5px;
-}
-.form-field {
-  display: flex;
-  flex-direction: row;
-  margin-top: 1rem;
-  padding: 0.5rem;
+  padding: 1rem;
 }
 .form-field:first-child {
   padding-top: 1rem;
 }
 label {
-  display: block;
+  display: inline-block;
   width: 30%;
 }
 
@@ -71,12 +75,13 @@ select {
   border-radius: 5px;
   text-transform: capitalize;
   height: 3rem;
-  padding-left: 1rem;
+  padding-left: 2rem;
+  margin: 1rem 0;
 }
+
 input[type="submit"] {
-  display: block;
-  width: 90%;
-  margin-top: 2rem;
+  width: 50%;
+  background-color: rgb(230, 127, 1);
 }
 textarea {
   height: 8rem;
@@ -84,35 +89,37 @@ textarea {
 }
 
 /***************** VIEW COMPONENT *********************/
-
+.view h3 {
+  margin: 2rem;
+}
 .box {
   display: flex;
   background-color: rgb(225, 223, 217);
   height: 60%;
-  width: 100%;
+  width: 90%;
   margin: 2rem;
 }
 .empty-div {
   border: 1px solid black;
-  width: 20%;
+  width: 10%;
   border-right: 1px solid rgb(163, 32, 15);
   margin: 0 2px;
 }
 .line {
-  height: 3.25rem;
-  border-bottom: 3px solid rgb(61, 59, 59);
+  height: 4.25rem;
+  /* border-bottom: 3px solid rgb(61, 59, 59); */
 }
 .show-input {
   display: block;
   border: 1px solid #6f4e37;
   border-left: 1px solid rgb(163, 32, 15);
-  width: 100%;
+  width: 500px;
 }
 view {
   width: 100%;
 }
 .view p {
-  line-height: 3rem;
+  line-height: 4rem;
   border-bottom: 3px solid black;
   padding-left: 0.5rem;
   font-family: "Mochiy Pop P One", sans-serif;

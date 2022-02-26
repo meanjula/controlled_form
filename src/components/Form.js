@@ -5,6 +5,7 @@ const Form = ({ submit, formHandler }) => {
     <form onSubmit={submit}>
       <div className="form-field">
         <label htmlFor="firstname">First name</label>
+        {/*controlled component react controls the form so don't have value inside input */}
         <input
           type="text"
           name="firstname"
@@ -51,7 +52,9 @@ const Form = ({ submit, formHandler }) => {
           <option value="Manager">Manager</option>
         </select>
       </div>
-      <input type="submit" value="send"></input>
+      <div className="form-field">
+        <input type="submit" value="send"></input>
+      </div>
     </form>
   );
 };

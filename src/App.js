@@ -19,16 +19,17 @@ class App extends Component {
     data: [],
   };
 
-  //res gives all json data and res.data gives specific data
+  //res gives all json data and res.data gives specific data from database
   componentDidMount() {
     axios
       .get("http://localhost:3001/notes")
       .then((res) => this.setState({ data: res.data }));
   }
   formHandler = (e) => {
+    // setting value with the help of name attribute from input field as we couldn't include value directly in input(controlled component)
     this.setState({
       inputData: { ...this.state.inputData, [e.target.name]: e.target.value },
-    });
+    }); //object destructuring, [e.target.value] gives dynamic data in square bracket
   };
 
   popupHandler = (e) => {
@@ -36,6 +37,7 @@ class App extends Component {
     this.setState({ popup: true });
   };
 
+  // sending data to databse
   postHandler = (e) => {
     axios
       .post("http://localhost:3001/notes", this.state.inputData)

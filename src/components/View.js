@@ -3,7 +3,7 @@ import React from "react";
 const View = ({ firstname, lastname, phone, message, role }) => {
   return (
     <div className="view">
-      {/* <h3>Show the input</h3> */}
+      <h3>Show the input</h3>
       <div className="box">
         <div className="empty-div">
           <p className="line"></p>
